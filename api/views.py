@@ -6,5 +6,6 @@ from rest_framework.response import Response
 def hello_api(request):
     return Response({
         "message": "Hello from CSC325!",
-        "status": "success"
+       "status": "success",
+       "version": "2.0"
     })

@@ -15,3 +15,12 @@ class HelloAPITests(TestCase):
             response.json()['message'],
             'Hello from CSC325!'
         )
+
+        
+    def test_hello_endpoint_returns_version(self):
+        response = self.client.get(reverse('hello_api'))
+        self.assertEqual(
+            response.json()['version'],
+            '2.0'
+        )
+
